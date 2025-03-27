@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f3f4f6, #ffffff);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 560px;
+  width: 1200px;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.select-btn {
+  border: 2px solid #1e3a8a;
+  background: white;
+  color: black;
+  padding: 8px 15px;
+  font-size: 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.select-btn:hover {
+  background: #e2e8f0;
+  color: #1e3a8a;
+  border: 2px solid #1e3a8a;
+}
+
+.btn{
+  text-align: center;
+}
+
+.find-btn{
+  width: 100px;
+  background: #1e3a8a;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 35px 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-btn{
+  width: 100px;
+  background: #1e3a8a;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 35px 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.find-btn:hover {
+  background: #2563eb;
+}
+
+.home-btn:hover {
+  background: #2563eb;
+}
