@@ -1,115 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
-
-@font-face {
-  font-family: GmarketSansMedium;
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #103675;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  font-family: "GmarketSansMedium";
-}
-
-.logo{
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-}
-
-.header{
-  position: absolute;
-  left: 10px;
-  width: 60%;
-  height: 50px;
-  margin: 0 auto;
+.container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header h1 a{
-  text-decoration: none;
-  color: white;
-  font-family: "Handjet", sans-serif;
-}
-
-.header .nav{
-  text-decoration: none;
-  color: white;
-  font-family: GmarketSansMedium;
-}
-
-.header .nav ul li{
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.header .nav ul li a{
-  text-decoration: none;
-  color: white;
-}
-
-.box{
-  position: absolute;
-  top: 50%;
-  left: 1236px;
-  transform: translate(-50%, -50%);
-  width: 600px;
   height: 100vh;
-  background-color: white;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8), 0 5px 5px 0 rgba(0, 0, 0, 0.8);
 }
 
-.lg-text {
-  font-size: 4rem;
+.left-section {
+  flex: 1;
+  background: linear-gradient(to right, #f3f4f6, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: #1e3a8a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
-.sm-text {
-  font-size: 3rem;
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-.author{
-  font-size: 1rem;
+.subtitle {
+  color: #2563eb;
+  font-size: 30px;
+  margin-top: 15px;
 }
 
-#dynamic {
-  position: relative;
-  display: inline-block;
+.right-section {
+  width: 30%;
+  background: linear-gradient(to bottom, #2563eb, #1e3a8a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
 }
 
-#dynamic::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: -10px;
-  width: 4px;
-  height: 100%;
+.menu-button {
+  width: 80%;
+  padding: 16px;
+  margin: 20px 0;
   background-color: white;
+  color: #1e3a8a;
+  font-size: 25px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-#dynamic.active::after {
-  display: none;
+.menu-button a {
+  color: #1e3a8a; /* 기본 색상 (파란색) */
+  text-decoration: none; /* 밑줄 제거 (선택 사항) */
+}
+
+.menu-button a:visited {
+  color: #1e3a8a; /* 방문한 링크도 파란색으로 유지 */
+}
+.menu-button:hover {
+  background-color: #e2e8f0;
 }
