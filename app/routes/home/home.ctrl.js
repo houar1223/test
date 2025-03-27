@@ -10,52 +10,80 @@ const output = {
     logger.info(`GET / 304 "홈 화면으로 이동"`);
     res.render("home/index");
   }, 
-  login: (req, res) => {
-    logger.info(`GET /login 304 "로그인 화면으로 이동"`);
-    res.render("home/login");
+  find_friend: (req, res) => {
+    logger.info(`GET /find_friend 304 "친구 찾기 화면으로 이동"`);
+    res.render("home/find_friend");
   },
-  register: (req, res) => {
-    logger.info(`GET /register 304 "회원가입 화면으로 이동"`);
-    res.render("home/register")
+  friend_list: (req, res) => {
+    logger.info(`GET /friend_list 304 "친구 목록 화면으로 이동"`);
+    res.render("home/friend_list")
   },
-  gallery: (req, res) => {
-    logger.info(`GET /gallery 304 "갤러리 화면으로 이동"`);
-    res.render("home/gallery")
+  chat: (req, res) => {
+    logger.info(`GET /chat 304 "채팅 화면으로 이동"`);
+    res.render("home/chat")
+  },
+  community: (req, res) => {
+    logger.info(`GET /community 304 "동호회 화면으로 이동"`);
+    res.render("home/community")
+  },
+  setting: (req, res) => {
+    logger.info(`GET /setting 304 "설정 화면으로 이동"`);
+    res.render("home/setting")
   }
 }
 
 const process = {
-  login: async (req, res) => {
+  find_friend: async (req, res) => {
     const user = new User(req.body);
-    const response = await user.login();
+    const response = await user.find_friend();
 
     const url = {
       method: "POST",
-      path: "/login",
+      path: "/find_friend",
       status: response.err ? 400 : 200,
     };
 
-    cookie.login_cookie();
+    cookie.find_friend_cookie();
     log(response, url);
     return res.status(url.status).json(response);
   },
-  register: async (req, res) => {
+  friend_list: async (req, res) => {
     const user = new User(req.body);
-    const response = await user.register();
+    const response = await user.friend_list();
 
     const url = {
       method: "POST",
-      path: "/register",
+      path: "/friend_list",
       status: response.err ? 409 : 201,
     };
 
     logger.info(response, url);
     return res.status(url.status).json(response);
   },
-  gallery: async (req, res) => {
+  chat: async (req, res) => {
     const url = {
       method: "POST",
-      path: "/gallery",
+      path: "/chat",
+      status: response.err ? 409 : 201,
+    };
+
+    logger.info(response, url);
+    return res.status(url.status).json(response);
+  },
+  community: async (req, res) => {
+    const url = {
+      method: "POST",
+      path: "/community",
+      status: response.err ? 409 : 201,
+    };
+
+    logger.info(response, url);
+    return res.status(url.status).json(response);
+  },
+  setting: async (req, res) => {
+    const url = {
+      method: "POST",
+      path: "/setting",
       status: response.err ? 409 : 201,
     };
 

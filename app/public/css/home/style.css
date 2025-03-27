@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Handjet:wght@100..900&family=Jua&display=swap');
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {
@@ -19,27 +23,30 @@ body {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   background-color: #1e3a8a;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
 }
 
 .title {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
   margin-top: 10px;
 }
 
 .subtitle {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: #2563eb;
-  font-size: 30px;
+  font-size: 50px;
   margin-top: 15px;
 }
 
@@ -54,12 +61,18 @@ body {
 }
 
 .menu-button {
-  width: 80%;
+  font-family: "Jua", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  width: 75%;
   padding: 16px;
   margin: 20px 0;
   background-color: white;
   color: #1e3a8a;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
   border: none;
   border-radius: 10px;
@@ -67,13 +80,13 @@ body {
   transition: background 0.3s;
 }
 
-.menu-button a {
-  color: #1e3a8a; /* 기본 색상 (파란색) */
-  text-decoration: none; /* 밑줄 제거 (선택 사항) */
+a{
+  color: #1e3a8a; 
+  text-decoration: none;
 }
 
-.menu-button a:visited {
-  color: #1e3a8a; /* 방문한 링크도 파란색으로 유지 */
+.menu-button:visited {
+  color: #1e3a8a;
 }
 .menu-button:hover {
   background-color: #e2e8f0;

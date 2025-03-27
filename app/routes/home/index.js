@@ -5,12 +5,16 @@ const router = express.Router();
 const ctrl = require('./home.ctrl');
 
 router.get("/", ctrl.output.home); 
-router.get("/login", ctrl.output.login);
-router.get("/register", ctrl.output.register);
-router.get("/gallery", ctrl.output.gallery);
+router.get("/find_friend", ctrl.output.find_friend);
+router.get("/friend_list", ctrl.output.friend_list);
+router.get("/chat", ctrl.output.chat);
+router.get("/community", ctrl.output.chat);
+router.get("/setting", ctrl.output.chat);
 
-router.post("/login", ctrl.process.login);
-router.post("/register", ctrl.process.register);
-router.post("/gallery", ctrl.output.gallery);
+router.post("/find_friend", ctrl.process.find_friend);
+router.post("/friend_list", ctrl.process.friend_list);
+router.post("/chat", ctrl.output.chat);
+router.post("/community", ctrl.output.chat);
+router.post("/setting", ctrl.output.chat);
 
 module.exports = router;
