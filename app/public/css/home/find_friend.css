@@ -56,6 +56,12 @@ h2 {
   border: 2px solid #1e3a8a;
 }
 
+.select-btn.active{
+  background: white;
+  color: #11b4b1;
+  border: 2px solid #11b4b1;
+}
+
 .btn{
   text-align: center;
 }
