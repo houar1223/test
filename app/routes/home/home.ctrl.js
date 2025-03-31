@@ -1,9 +1,6 @@
 "use strict";
 
-const User = require("../../models/User");
-const UserStorage = require("../../models/UserStorage");
 const logger = require("../../config/logger");
-const cookie = require("../../models/cookie");
 
 const output = {
   home: (req, res) => {
@@ -13,6 +10,10 @@ const output = {
   find_friend: (req, res) => {
     logger.info(`GET /find_friend 304 "친구 찾기 화면으로 이동"`);
     res.render("home/find_friend");
+  },
+  find: (req, res) => {
+    logger.info(`GET /find 304 "친구 추천 화면으로 이동"`);
+    res.render("home/find");
   },
   friend_list: (req, res) => {
     logger.info(`GET /friend_list 304 "친구 목록 화면으로 이동"`);
@@ -43,7 +44,19 @@ const process = {
       status: response.err ? 400 : 200,
     };
 
-    cookie.find_friend_cookie();
+    log(response, url);
+    return res.status(url.status).json(response);
+  },
+  find: async (req, res) => {
+    const user = new User(req.body);
+    const response = await user.find();
+
+    const url = {
+      method: "POST",
+      path: "/find",
+      status: response.err ? 400 : 200,
+    };
+
     log(response, url);
     return res.status(url.status).json(response);
   },
