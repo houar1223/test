@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>채팅</title>
+  <link rel="stylesheet" href="/css/home/chat.css">
+  <script src="/js/home/chat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>친구 목록</h2>
+      <ul class="friend-list" id="friend-list">
+        <li onclick="selectFriend('김영자')">김영자</li>
+        <li onclick="selectFriend('박영수')">박영수</li>
+        <li onclick="selectFriend('박영호')">박영호</li>
+        <li onclick="selectFriend('김철수')">김철수</li>
+      </ul>
+      <button class="home-btn" onclick="location.href='/'">홈</button>
+    </div>
+    <div class="chat-section">
+      <div class="chat-header" id="chat-header">상대방과의 채팅</div>
+      <div class="chat-box" id="chat-box"></div>
+      <div class="input-area">
+        <input type="text" id="message-input" placeholder="메시지를 입력하세요...">
+        <button onclick="sendMessage()">전송</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
