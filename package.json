@@ -22,8 +22,5 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "webpack-cli": "^6.0.1"
-  }
+  "description": ""
 }
